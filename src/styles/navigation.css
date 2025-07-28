@@ -1,0 +1,47 @@
+.navegation_row {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-around;
+  width: 70%;
+}
+
+.navegation_column {
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navegation_column > a {
+  margin: 1% auto;
+}
+
+.navegation > a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navegation > a:hover {
+  color: #34B8FF;
+}
+
+.navegation > a.ativo {
+  color: #34B8FF;
+}
+
+.navegation > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #34B8FF;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navegation > a:hover::after {
+  transform: scaleX(1);
+}

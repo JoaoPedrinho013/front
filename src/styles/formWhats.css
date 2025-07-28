@@ -1,0 +1,54 @@
+.MuiOutlinedInput-root {
+  color: white !important;
+  background-color: #3d3d3d !important;
+  border-radius: 4px;
+}
+
+.MuiInputLabel-root {
+  color: white !important;
+}
+
+.MuiInputBase-input::placeholder {
+  color: white !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #34B8FF !important;
+}
+
+.MuiButton-containedPrimary {
+  background: linear-gradient(45deg, #2c2c2c, #3d3d3d) !important;
+  color: white !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  background: linear-gradient(135deg, #3d3d3d, #2c2c2c) !important;
+}
+
+.MuiSelect-icon {
+  color: white !important;
+}
+
+.MuiPaper-root.MuiMenu-paper {
+  background-color: #3d3d3d !important;
+  color: white !important;
+}
+
+.MuiMenuItem-root {
+  color: white !important;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: #2c2c2c !important;
+}
+
+.Mui-selected {
+  background-color: #2c2c2c !important;
+}
+
+.form-whats{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 1%;
+  margin-top: 2%;
+}
