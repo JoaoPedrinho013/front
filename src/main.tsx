@@ -12,7 +12,7 @@ import Footer from './components/Footer.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/front'>
       <Header />
       <Routes>
         <Route path="/" element={<ShinyShowcase />} />
