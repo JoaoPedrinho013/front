@@ -21,10 +21,6 @@
   transition: color 0.3s ease;
 }
 
-.navegation > a:hover {
-  color: #34B8FF;
-}
-
 .navegation > a.ativo {
   color: #34B8FF;
 }

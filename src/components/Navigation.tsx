@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { Link, Stack } from '@mui/material';
 import '../styles/navigation.css';
@@ -11,7 +10,6 @@ export default function Navigation({ layout }: NavigationProps) {
   const location = useLocation();
 
   return (
-    <React.StrictMode>
       <Stack className={`navegation navegation_${layout}`}>
         <Link
           className={location.pathname === '/' ? 'ativo' : ''}
@@ -43,6 +41,5 @@ export default function Navigation({ layout }: NavigationProps) {
           SHINY RARES
         </Link>
       </Stack>
-    </React.StrictMode>
   );
 }

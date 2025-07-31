@@ -1,5 +1,9 @@
+import { Container } from "@mui/material";
+
 export default function ShinyRare() {
   return (
-    <h1>ShinyRare</h1>
-  )
+   <Container className="main">
+
+    </Container>
+  );
 }

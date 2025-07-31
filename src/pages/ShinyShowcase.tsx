@@ -1,5 +1,9 @@
+import { Container } from "@mui/material";
+
 export default function ShinyShowcase() {
   return (
-    <h1>ShinyShowcase</h1>
-  )
+   <Container className="main">
+
+    </Container>
+  );
 }

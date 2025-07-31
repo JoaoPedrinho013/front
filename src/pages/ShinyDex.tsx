@@ -1,5 +1,9 @@
+import { Container } from "@mui/material";
+
 export default function ShinyDex() {
   return (
-    <h1>ShinyDex</h1>
-  )
+    <Container className="main">
+
+    </Container>
+  );
 }

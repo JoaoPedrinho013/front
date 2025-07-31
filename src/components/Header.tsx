@@ -1,10 +1,15 @@
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { Link, Box, AppBar, Toolbar, Tooltip } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
-import logo from '../assets/icons/zorua.png';
+import LogoutIcon from '@mui/icons-material/Logout';
+import logo from '../assets/icons/Zorua.gif';
 import Navigation from './Navigation.tsx';
 
 export default function Header() {
+  const location = useLocation();
+  const showLoginIcon = location.pathname !== '/admin';
+
+
   return (
     <AppBar position='static'>
       <Toolbar
@@ -12,6 +17,7 @@ export default function Header() {
           width: '100dvw',
           backgroundColor: '#2c2c2c',
           justifyContent: 'space-around',
+          borderBottom: "1px solid #34B8FF"
         }}
       >
         <Link component={RouterLink} to="/">
@@ -22,13 +28,22 @@ export default function Header() {
             sx={{ height: 40, cursor: 'pointer' }}
           />
         </Link>
-        <Navigation layout='row'/>
-        <Link component={RouterLink} to="/login" underline="none" color="inherit">
-          <Tooltip title="Login" placement="bottom">
-            <LoginIcon sx={{ cursor: 'pointer' }} />
-          </Tooltip>
-        </Link>
 
+        <Navigation layout='row' />
+
+        {showLoginIcon ? (
+          <Link component={RouterLink} to="/login" underline="none" color="inherit">
+            <Tooltip title="Sign in" placement="bottom" arrow>
+              <LoginIcon sx={{ cursor: 'pointer' }} />
+            </Tooltip>
+          </Link>
+        ) : (
+          <Link component={RouterLink} to="/" underline="none" color="inherit">
+            <Tooltip title="Sign out" placement="bottom" arrow>
+              <LogoutIcon sx={{ cursor: 'pointer' }} />
+            </Tooltip>
+          </Link>
+        )}
       </Toolbar>
     </AppBar>
   );
