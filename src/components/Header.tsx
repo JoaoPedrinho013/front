@@ -1,5 +1,5 @@
 import { Link as RouterLink, useLocation } from 'react-router-dom';
-import { Link, Box, AppBar, Toolbar, Tooltip } from '@mui/material';
+import { Link, Box, AppBar, Toolbar, Tooltip, IconButton } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import logo from '../assets/icons/Zorua.gif';
@@ -34,13 +34,13 @@ export default function Header() {
         {showLoginIcon ? (
           <Link component={RouterLink} to="/login" underline="none" color="inherit">
             <Tooltip title="Sign in" placement="bottom" arrow>
-              <LoginIcon sx={{ cursor: 'pointer' }} />
+              <IconButton color='inherit'><LoginIcon /></IconButton>
             </Tooltip>
           </Link>
         ) : (
           <Link component={RouterLink} to="/" underline="none" color="inherit">
             <Tooltip title="Sign out" placement="bottom" arrow>
-              <LogoutIcon sx={{ cursor: 'pointer' }} />
+              <IconButton color='inherit'><LogoutIcon /></IconButton>
             </Tooltip>
           </Link>
         )}
