@@ -2,7 +2,7 @@ import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { Link, Box, AppBar, Toolbar, Tooltip, IconButton } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
-import logo from '../assets/icons/Zorua.gif';
+import logo from '../assets/images/logo_nome.png';
 import Navigation from './Navigation.tsx';
 
 export default function Header() {
@@ -25,7 +25,7 @@ export default function Header() {
             component="img"
             src={logo}
             alt="Logo"
-            sx={{ height: 40, cursor: 'pointer' }}
+            sx={{ height: 25, cursor: 'pointer' }}
           />
         </Link>
 
