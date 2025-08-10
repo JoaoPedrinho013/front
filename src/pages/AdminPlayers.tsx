@@ -1,9 +1,13 @@
-import { useMemo } from 'react';
+import { useMemo, StrictMode } from 'react';
 import {
   MaterialReactTable,
   useMaterialReactTable,
   type MRT_ColumnDef,
 } from 'material-react-table';
+import { IconButton, Link, Tooltip } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { Link as RouterLink } from "react-router-dom";
 
 
 type Player = {
@@ -21,7 +25,7 @@ const data: Player[] = [
   { id: 4, nickname: 'Gege', lastShiny: '', totalShiny: 0 },
 ];
 
-export default function Admin() {
+export default function AdminPlayers() {
 
   const columns = useMemo<MRT_ColumnDef<Player>[]>(
     () => [
@@ -45,6 +49,25 @@ export default function Admin() {
         header: 'TOTAL SHINY',
         size: 100,
       },
+      /*aqui comeca os botoes */
+    {
+      id: 'edit',
+      header: 'EDIT',
+      Cell: () => (
+        <StrictMode>
+          <Link component={RouterLink} to="/" underline="none" color="inherit">
+            <Tooltip title="Sign out" placement="bottom" arrow>
+              <IconButton color='inherit'><EditIcon /></IconButton>
+            </Tooltip>
+          </Link>
+
+          <IconButton>
+            <DeleteIcon />
+          </IconButton>
+        </StrictMode>
+      ),
+    },
+     /*aqui acaba os botoes */
     ],
     [],
   );

@@ -7,7 +7,8 @@ import ShinyShowcase from './pages/ShinyShowcase.tsx';
 import ShinyDex from './pages/ShinyDex.tsx';
 import ShinyRare from './pages/ShinyRare.tsx';
 import Login  from './components/Login.tsx';
-import Admin from './pages/Admin.tsx';
+import AdminPlayers from './pages/AdminPlayers.tsx';
+import AdminPlayerCatches from './pages/AdminPlayerCatches.tsx';
 import Footer from './components/Footer.tsx';
 
 createRoot(document.getElementById('root')!).render(
@@ -19,7 +20,8 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/dex" element={<ShinyDex />} />
         <Route path="/rares" element={<ShinyRare />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin-players" element={<AdminPlayers />} />
+        <Route path="/admin-player-catches" element={<AdminPlayerCatches />} />
       </Routes>
       <Footer />
     </BrowserRouter>
