@@ -11,7 +11,6 @@ import { Link as RouterLink } from "react-router-dom";
 
 
 type Player = {
-  id: number;
   nickname: string;
   lastShiny: string;
   totalShiny: number;
@@ -19,21 +18,16 @@ type Player = {
 
 
 const data: Player[] = [
-  { id: 1, nickname: 'Azien', lastShiny: 'Haunter', totalShiny: 18 },
-  { id: 2, nickname: 'Lightyear', lastShiny: 'Ratata', totalShiny: 1 },
-  { id: 3, nickname: 'Kadu', lastShiny: 'Marowack', totalShiny: 1 },
-  { id: 4, nickname: 'Gege', lastShiny: '', totalShiny: 0 },
+  { nickname: 'Azien', lastShiny: 'Haunter', totalShiny: 18 },
+  { nickname: 'Lightyear', lastShiny: 'Ratata', totalShiny: 1 },
+  { nickname: 'Kadu', lastShiny: 'Marowack', totalShiny: 1 },
+  { nickname: 'Gege', lastShiny: '', totalShiny: 0 },
 ];
 
 export default function AdminPlayers() {
 
   const columns = useMemo<MRT_ColumnDef<Player>[]>(
     () => [
-      {
-        accessorKey: 'id',
-        header: 'ID',
-        size: 50,
-      },
       {
         accessorKey: 'nickname',
         header: 'NICKNAME',
