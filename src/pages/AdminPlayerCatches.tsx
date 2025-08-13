@@ -1,9 +1,14 @@
-import { useMemo } from 'react';
+import { useMemo, StrictMode } from 'react';
 import {
   MaterialReactTable,
   useMaterialReactTable,
   type MRT_ColumnDef,
 } from 'material-react-table';
+import { IconButton, Link, Tooltip } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { Link as RouterLink } from "react-router-dom";
+
 
 
 type Catch = {
@@ -68,6 +73,25 @@ export default function AdminPlayerCatches() {
       accessorKey: 'status',
       header: 'SHINY STATUS',
     },
+      /*aqui comeca os botoes */
+        {
+          id: 'edit',
+          header: 'EDIT',
+          Cell: () => (
+            <StrictMode>
+              <Link component={RouterLink} to="/" underline="none" color="inherit">
+                <Tooltip title="Sign out" placement="bottom" arrow>
+                  <IconButton color='inherit'><EditIcon /></IconButton>
+                </Tooltip>
+              </Link>
+    
+              <IconButton>
+                <DeleteIcon />
+              </IconButton>
+            </StrictMode>
+          ),
+        },
+         /*aqui acaba os botoes */
   ],
   [],
 );

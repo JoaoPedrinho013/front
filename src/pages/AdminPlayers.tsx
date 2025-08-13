@@ -49,7 +49,7 @@ export default function AdminPlayers() {
       header: 'EDIT',
       Cell: () => (
         <StrictMode>
-          <Link component={RouterLink} to="/" underline="none" color="inherit">
+          <Link component={RouterLink} to="/admin-player-catches" underline="none" color="inherit">
             <Tooltip title="Sign out" placement="bottom" arrow>
               <IconButton color='inherit'><EditIcon /></IconButton>
             </Tooltip>

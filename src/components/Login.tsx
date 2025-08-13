@@ -66,18 +66,8 @@ export default function Login() {
           variant="contained"
           component={RouterLink}
           to="/admin-players"
-          // to="/admin-player-catches"
         >
           Sign in
-        </Button>
-        <Button
-          sx={{ width: '100%' }}
-          variant="contained"
-          component={RouterLink}
-          // to="/admin-players"
-          to="/admin-player-catches"
-        >
-          Sign in 2
         </Button>
       </Stack>
     </Container>
